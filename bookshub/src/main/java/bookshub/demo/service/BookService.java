@@ -60,10 +60,7 @@ public class BookService{
 	}
 	
 	public List<BookDto> getBooks(){
-		
-	
 		return books;
-		
 	}
 	
 	public BookDto getBookByName(String name) {
@@ -72,7 +69,7 @@ public class BookService{
 
 	public BookDto create(BookDto bookDto) {
 		books.add(bookDto);
-		 return bookDto;
+		return bookDto;
 	}
 
 	public BookDto update(BookDto bookDto) {
@@ -83,8 +80,7 @@ public class BookService{
 		return bookDto;
 	}
 
-	public boolean delete(Integer isbn) {
-		
+	public boolean delete(Integer isbn) {		
 		return books.removeIf(bk->bk.getIsbn()==isbn);
 	}
 
