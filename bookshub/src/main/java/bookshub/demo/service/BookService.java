@@ -67,11 +67,6 @@ public class BookService{
 	}
 	
 	public BookDto getBookByName(String name) {
-		try {
-			return  books.stream().filter(bk->bk.getName().startsWith(name)).findFirst().get();
-		}catch(NoSuchElementException e) {
-			return null;
-		}
 		
 	}
 
